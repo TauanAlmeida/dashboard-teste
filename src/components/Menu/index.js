@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logo.png";
+import Adsoft from "../../assets/adsoft2.png";
 import {
   makeStyles,
   Container,
@@ -28,7 +28,7 @@ function Menu({ toggleTheme }) {
     <Box component="nav" className={classes.menu} position="relative">
       <Box display="flex" flexDirection="column">
         <div className={classes.header}>
-          <img src={Logo} alt="logo" />
+          <img src={Adsoft} alt="logo" />
         </div>
       </Box>
       <Divider absolute={true} variant="fullWidth" orientation="horizontal" />
