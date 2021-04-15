@@ -1,10 +1,5 @@
 import React from "react";
 
-import Avatar from "@material-ui/core/Avatar";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemText from "@material-ui/core/ListItemText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -46,10 +41,6 @@ function ModalFilterData(props) {
 
   const handleClose = () => {
     onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
   };
 
   return (

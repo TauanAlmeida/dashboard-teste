@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  makeStyles,
-  useTheme,
-  Container,
-} from "@material-ui/core";
+import { Box, Typography, makeStyles, useTheme } from "@material-ui/core";
 import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import ArrowUpwardRoundedIcon from "@material-ui/icons/ArrowUpwardRounded";
 function CardFaturamento({ titulo, valor, percent }) {

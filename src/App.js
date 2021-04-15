@@ -1,8 +1,7 @@
 import GlobalStyle from "./styles/global";
-import { useState } from "react";
 import ThemePersistedState from "./utils/ThemePersistedState";
 import Dashboard from "./pages/Dashboard";
-import { ThemeProvider, createMuiTheme, Button } from "@material-ui/core";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 import { deepPurple, purple } from "@material-ui/core/colors";
 import "chartjs-plugin-datalabels";
 

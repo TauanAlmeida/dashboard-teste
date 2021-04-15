@@ -1,29 +1,13 @@
 import React from "react";
 import Adsoft from "../../assets/adsoft2.png";
-import {
-  makeStyles,
-  Container,
-  Button,
-  Box,
-  Typography,
-  Divider,
-} from "@material-ui/core";
+import { makeStyles, Box, Typography, Divider } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import BarChartIcon from "@material-ui/icons/BarChart";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
 
 function Menu({ toggleTheme }) {
   const theme = useTheme();
   const classes = useStyles(theme);
 
-  function handleModeLayout(theme) {
-    if (theme === "light") {
-      return <Brightness4Icon className={classes.iconMode} />;
-    } else {
-      return <Brightness7Icon className={classes.iconMode} />;
-    }
-  }
   return (
     <Box component="nav" className={classes.menu} position="relative">
       <Box display="flex" flexDirection="column">
@@ -35,7 +19,7 @@ function Menu({ toggleTheme }) {
       <Box
         display="flex"
         alignItems="center"
-        justifyContent="center"
+        justifyContent="flex-start"
         className={classes.menuItemActive}
         borderLeft={4}
       >
@@ -84,7 +68,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   iconActive: {
+    marginLeft: 15,
     color: theme.palette.primary.main,
+    marginRight: 15,
   },
   menuItemActive: {
     borderLeftWidth: 5,

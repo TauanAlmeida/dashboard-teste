@@ -20,7 +20,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import Menu from "../../components/Menu";
 import PhotoPerfil from "../../assets/Perfil.png";
 import CardFaturamento from "../../components/CardFaturamento";
-import { useTheme } from "@material-ui/core/styles";
 import LineChart from "../../components/lineChart";
 import Barchart from "../../components/BarChart";
 import CardChart from "../../components/CardChart";
@@ -28,12 +27,10 @@ import HorizontalBarChart from "../../components/HorizontalBarChart";
 import HorizontalBarChart2 from "../../components/HorizontalBarChart2";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
-import DirectionsIcon from "@material-ui/icons/Directions";
 import ModalFilterData from "../../components/ModalFilterData";
 import Tooltip from "@material-ui/core/Tooltip";
 
 function Dashboard({ toggleTheme, themeMode }) {
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState({});
   const classes = useStyles();
