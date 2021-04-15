@@ -7,19 +7,28 @@ export default createGlobalStyle`
   padding: 0;
   font-family: 'Gilroy', sans-serif !important;
 }
+/* 
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+ 
 
-body::-webkit-scrollbar {
-  width: 1em;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
  
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(103 58 183 / 50%);
 }
- 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgb(103 58 183 / 50%);;
+} */
 
 .title{
   font-weight: bold;
@@ -39,6 +48,11 @@ section.cardWrapper{
   width: 100%;
   overflow: hidden;
   overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
+.mb-3{
+  margin-bottom: 10px;
 }
 .overflowHidden{
   overflow: hidden;

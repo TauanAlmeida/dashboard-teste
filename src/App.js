@@ -4,6 +4,8 @@ import ThemePersistedState from "./utils/ThemePersistedState";
 import Dashboard from "./pages/Dashboard";
 import { ThemeProvider, createMuiTheme, Button } from "@material-ui/core";
 import { deepPurple, purple } from "@material-ui/core/colors";
+import "chartjs-plugin-datalabels";
+
 function App() {
   const [themeMode, setTheme] = ThemePersistedState("theme", "light");
 
