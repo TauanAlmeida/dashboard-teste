@@ -1,13 +1,6 @@
 import React from "react";
 import Adsoft from "../../assets/adsoft2.png";
-import {
-  makeStyles,
-  Box,
-  Typography,
-  Divider,
-  Tooltip,
-  Button,
-} from "@material-ui/core";
+import { makeStyles, Box, Divider, Tooltip, Button } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
