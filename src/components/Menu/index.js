@@ -1,50 +1,87 @@
 import React from "react";
 import Adsoft from "../../assets/adsoft2.png";
-import { makeStyles, Box, Typography, Divider } from "@material-ui/core";
+import {
+  makeStyles,
+  Box,
+  Typography,
+  Divider,
+  Tooltip,
+  Button,
+} from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import BarChartIcon from "@material-ui/icons/BarChart";
-
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import GroupRoundedIcon from "@material-ui/icons/GroupRounded";
+import StoreMallDirectoryRoundedIcon from "@material-ui/icons/StoreMallDirectoryRounded";
 function Menu({ toggleTheme }) {
   const theme = useTheme();
   const classes = useStyles(theme);
 
   return (
     <Box component="nav" className={classes.menu} position="relative">
-      <Box display="flex" flexDirection="column">
+      <Box display="flex" mb={8} flexDirection="column">
         <div className={classes.header}>
           <img src={Adsoft} alt="logo" />
         </div>
       </Box>
       <Divider absolute={true} variant="fullWidth" orientation="horizontal" />
+
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        className={classes.menuItemActive}
+        mb={3}
+      >
+        <Tooltip title="Home" aria-label="Home" placement="end">
+          <Button fullWidth={true}>
+            <HomeRoundedIcon className={classes.iconDisabled} />
+          </Button>
+        </Tooltip>
+      </Box>
+
       <Box
         display="flex"
         alignItems="center"
         justifyContent="flex-start"
         className={classes.menuItemActive}
         borderLeft={4}
+        mb={3}
       >
-        <BarChartIcon className={classes.iconActive} />
-        <Typography component="span" color="primary">
-          Faturamento
-        </Typography>
+        <Tooltip title="Faturamento" aria-label="Faturamento" placement="end">
+          <Button fullWidth={true}>
+            <BarChartIcon className={classes.iconActive} />
+          </Button>
+        </Tooltip>
       </Box>
 
-      {/*       <Box
-        p={5}
+      <Box
         display="flex"
-        flexDirection="column"
         alignItems="center"
-        justifyContent="space-between"
-        position="absolute"
-        className={classes.pullBottom}
+        justifyContent="flex-start"
+        className={classes.menuItemActive}
+        mb={3}
       >
-        <Typography omponent="span" color="primary">
-          Tema
-        </Typography>
-        <Button onClick={toggleTheme}>
-          {handleModeLayout(theme.palette.type)}
-        </Button>
-      </Box> */}
+        <Tooltip title="Loja" aria-label="Loja" placement="end">
+          <Button fullWidth={true}>
+            <StoreMallDirectoryRoundedIcon className={classes.iconDisabled} />
+          </Button>
+        </Tooltip>
+      </Box>
+
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        className={classes.menuItemActive}
+        mb={3}
+      >
+        <Tooltip title="Clientes" aria-label="Clientes" placement="end">
+          <Button fullWidth={true}>
+            <GroupRoundedIcon className={classes.iconDisabled} />
+          </Button>
+        </Tooltip>
+      </Box>
     </Box>
   );
 }
@@ -52,7 +89,7 @@ function Menu({ toggleTheme }) {
 const useStyles = makeStyles((theme) => ({
   menu: {
     background: theme.palette.backgroundPrimary,
-    minWidth: 250,
+    minWidth: 80,
     minHeight: "100vh",
     height: "auto",
     display: "flex",
@@ -72,11 +109,26 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     marginRight: 15,
   },
+  iconDisabled: {
+    marginLeft: 15,
+    color: "#979797",
+    marginRight: 15,
+  },
+  menuItem: {
+    width: "100%",
+    height: 35,
+    "&:hover": {
+      backgroundColor: "rgba(79, 79, 79, 0.04)",
+    },
+  },
   menuItemActive: {
     borderLeftWidth: 5,
     borderLeftColor: theme.palette.primary.main,
     width: "100%",
     height: 35,
+    "&:hover": {
+      backgroundColor: "rgba(79, 79, 79, 0.04)",
+    },
   },
   iconMode: {
     color: theme.palette.primary.main,

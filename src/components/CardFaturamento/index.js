@@ -9,7 +9,7 @@ function CardFaturamento({ titulo, valor, percent }) {
     if (valor > "0") {
       return (
         <>
-          {valor}%
+          +{valor}%
           <ArrowUpwardRoundedIcon color="primary" />
         </>
       );
